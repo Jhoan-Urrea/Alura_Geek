@@ -27,6 +27,10 @@ async function crearProducto(nombre,precio,imagen){
         imagen:imagen
     })
     })
+    .then((res) => {
+        // Después de crear el producto, recarga la página
+        location.reload()})
+    .catch((err) => console.log(err));
     if(!conexion.ok){
         throw new Error("No fue posible enviar el producto");
     }
@@ -42,6 +46,8 @@ async function eliminarProducto(productId){
         "Content-type":"application/json"
     },
 })
+.then(res => res.json())
+.catch((err) => console.log(err));
 }
 
 /*Exportamos los metodos que estan conectados a nuestro archivo .json */
