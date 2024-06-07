@@ -25,11 +25,11 @@
         <section class="new-product">
             <h2>Agregar producto</h2>
             <div class="add_product">
-                <form data-formulario>
+                <form data-form>
                     <label for="name">Nombre del producto: </label>
-                    <input type="text" id="name" placeholder="Ingresa el nombre del producto"  autocomplete="off" data-name>
+                    <input type="text" id="name" placeholder="Ingresa el nombre del producto"  autocomplete="off" required data-name>
                     <label for="price">Precio del producto: </label>
-                    <input type="text" id="price" placeholder="Ingresa el precio del producto" autocomplete="off" required data-price>
+                    <input type="number" id="price" placeholder="Ingresa el precio del producto" autocomplete="off" required data-price>
                     <label for="image">Imagen del producto (URL) : </label>
                     <input type="text" id="image" placeholder="Ingresa la direccion de la imagen" autocomplete="off" required data-image>
                     <div class="buttons-form">
@@ -47,7 +47,6 @@
         <h4>Alura Latam -  2024</h4>
     </footer>
     
-    <script type="module" src="js/mostrarProductos.js" ></script>
-    <script type="module" src="js/crearProducto.js" ></script>
+    <script src="js/controllers/main.js" type="module"></script>
 </body>
 </html>
