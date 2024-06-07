@@ -1,7 +1,8 @@
 
+const apiUrl = "https://fake-api-blush-tau.vercel.app/productos";
 /*Metodo que nos permite listar los productos que se encuentra en nuestro archivo .json */
 async function listarProductos(){
-    const conexion = await fetch("http://localhost:3001/productos",{
+    const conexion = await fetch(apiUrl,{
         method:"GET",
         headers:{
         "Content-type":"application/json"
@@ -15,7 +16,7 @@ async function listarProductos(){
 
 /* Metodo que nos permite crear un nuevo producto en nuestro archivo .json */
 async function crearProducto(nombre,precio,imagen){
-    const conexion= await fetch("http://localhost:3001/productos",{
+    const conexion= await fetch(apiUrl,{
     method:"POST",
     headers:{
         "Content-type":"application/json"
@@ -35,7 +36,7 @@ async function crearProducto(nombre,precio,imagen){
 
 /* Metodo que realiza la eliminacion de un producto, a traves de su identificacion ingresado por parametro */
 async function eliminarProducto(productId){
-    const conexion= await fetch(`http://localhost:3001/productos/${productId}`,{
+    const conexion= await fetch("https://fake-api-blush-tau.vercel.app/productos"+`/${productId}`,{
     method:"DELETE",
     headers:{
         "Content-type":"application/json"
